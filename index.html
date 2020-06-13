@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>enhanced website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
+
+</head>
+<body>
+
+<div class="display-cover">
+    <video id="live"  class="main-vid" autoplay></video>
+    <!--  video screen to display the recorded part  -->
+    <video id="recording"  class="d-none" autoplay controls></video>
+    <canvas class="d-none"></canvas>
+
+    <div class="video-options">
+        <select name="" id="" class="custom-select">
+            <option value="">Select camera</option>
+        </select>
+    </div>
+
+    <img class="screenshot-image d-none" alt="">
+
+    <div class="controls">
+        
+        <button class="btn btn-success start" title="Start feed"><i data-feather="play-circle"></i></button>
+        <button class="btn btn-info pause d-none" title="Pause feed"><i data-feather="pause"></i></button>
+        <button class="btn btn-danger record d-none" title="Record"><i data-feather="disc"></i></button>
+        <button class="btn btn-danger stop d-none" title="Stop"><i data-feather="stop-circle"></i></button>
+        <button class="btn btn-info download d-none" title="Download"><i data-feather="download"></i></button>
+        <button class="btn btn-success play d-none" title="Play recording"><i data-feather="play-circle"></i></button>
+        <button class="btn btn-info screenshot d-none" title="ScreenShot"><i data-feather="image"></i></button>
+        <button class="btn btn-info save d-none" title="Save"><i data-feather="save"></i></button>
+        
+   
+    </div>
+</div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js'></script>
+    <script  src="script.js"></script>
+
+</body>
+</html>
