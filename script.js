@@ -8,8 +8,14 @@ const recordedVideo = document.querySelector('video#recording');
 const canvas = document.querySelector('canvas');
 const screenshotImage = document.querySelector('img');
 const controls = document.querySelector('.controls');
+const videoControls = document.querySelector('.video-controls');
+const photoControls = document.querySelector('.photo-controls');
 const buttons = [...controls.querySelectorAll('button')];
-const [start, pause, record, stop, download, play, screenshot, save] = buttons;
+const videoButtons = [...videoControls.querySelectorAll('button')];
+const photoButtons = [...photoControls.querySelectorAll('button')];
+const [start, pause, record, stop] = buttons;
+const [download, play] = videoButtons;
+const [screenshot, save] = photoButtons;
 
 let streamStarted = false;
 
