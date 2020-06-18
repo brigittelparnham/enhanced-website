@@ -49,7 +49,7 @@
     display: flex;
 }
 
-.controls > button {
+.controls > button, .video-controls > button, .photo-controls > button {
     width: 45px;
     height: 45px;
     text-align: center;
@@ -58,21 +58,21 @@
     background: transparent;
 }
 
-.controls > button:hover svg {
+.controls > button:hover svg, .video-controls > button:hover svg, .photo-controls > button:hover svg {
     color: white !important;
 }
 
 @media (min-width: 300px) and (max-width: 400px) {
-    .controls {
+    .controls , .video-controls, .photo-controls{
         flex-direction: column;
     }
     
-    .controls {
+    .controls , .video-controls, .photo-controls{
         margin: 5px 0 !important;
     }
 }
 
-.controls > button > svg {
+.controls > button > svg, .video-controls > button > svg, .photo-controls > button > svg {
     height: 20px;
     width: 18px;
     text-align: center;
@@ -102,18 +102,36 @@
 }
 
 
-.controls button:nth-child(5) svg {
+
+
+.video-controls button:nth-child(1) svg {
     color: #008496
 }
 
-.controls button:nth-child(6) svg {
+.video-controls button:nth-child(2) svg {
     color: #00B541
 }
 
-.controls button:nth-child(7) svg {
+
+.photo-controls button:nth-child(1) svg {
   color: #008496;
 }
 
-.controls button:nth-child(8) svg {
+.photo-controls button:nth-child(2) svg {
   color: #008496;
+}
+
+
+.video-controls{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    display: flex;
+}
+
+.photo-controls{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    display: flex;
 }
