@@ -190,7 +190,8 @@ download.onclick = () => {
     a.style.display='none';
     a.href=url;
     //downloads
-    a.download = 'test.webm';
+    var video_id = get_id();
+    a.download = 'video'+video_id+'.webm';
     document.body.appendChild(a);
     a.click();
     //releases the url 
@@ -216,12 +217,17 @@ save.onclick = () => {
     //returns a data containig the image in png 
     image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
     var link = document.createElement('a');
-    link.download = "image.png";
+    var photo_id = get_id();
+    link.download = 'photo'+photo_id+'.png';
     link.href = image;
     //downloads
     link.click();
 }
 
 
+function get_id() {
+    var newDate = new Date();
+    return newDate.getTime();
+}
 
 
